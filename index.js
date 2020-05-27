@@ -16,7 +16,7 @@ function MotionSensorAccessory(log, config) {
 	this.topic = config['topic'];
 	this.sn = config['sn'] || 'Unknown';
 
-	this.client_Id 		= 'mqttjs_' + Math.random().toString(16).substr(2, 8);
+	this.client_Id 		= 'mqttjs_' + config['clientid'] || Math.random().toString(16).substr(2, 8);
 
 	this.options = {
 		keepalive: 10,
